@@ -65,3 +65,66 @@ h3 {
 p, ul, ol {
     margin-bottom: 1rem;
 }
+
+
+/* HEADER */
+
+/* Gives the header a clean white background with a maize line underneath. */
+header {
+    background-color: var(--white);
+    padding: 1rem;
+    border-bottom: 4px solid var(--maize);
+}
+
+/* Keeps the UMSI logo at a readable size without taking up too much space. */
+header img {
+    width: 100%;
+    max-width: 12rem;
+    height: auto;
+}
+
+
+/* NAVIGATION */
+
+/* Adds some space between the logo and navigation menu. */
+nav {
+    margin-top: 1rem;
+}
+
+/* Uses CSS Grid to stack navigation links neatly on mobile screens. */
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* Makes each navigation link a large button that's easy to tap on mobile. */
+nav a {
+    display: block;
+    padding: 0.85rem 1rem;
+    background-color: var(--michigan-blue);
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    font-weight: 600;
+}
+
+/* Changes the background and adds an underline when someone hovers over a link. */
+nav a:hover {
+    background-color: #174A75;
+    text-decoration: underline;
+}
+
+
+/* Highlights the current page with maize so visitors know where they are. */
+nav a[aria-current="page"] {
+    background-color: var(--maize);
+    color: var(--michigan-blue);
+    border: 2px solid var(--michigan-blue);
+    font-weight: 700;
+}
