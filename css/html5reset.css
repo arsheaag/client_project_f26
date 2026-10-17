@@ -1,0 +1,25 @@
+/* Removes default spacing and borders from common HTML elements. */
+html, body, div, header, nav, main, section, article,
+footer, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Makes HTML5 page sections behave as block elements. */
+header, nav, main, section, article, footer {
+    display: block;
+}
+
+/* Removes default bullets so we can style lists ourselves. */
+ul, ol {
+    list-style: none;
+}
+
+/* Keeps images from overflowing their containers. */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
