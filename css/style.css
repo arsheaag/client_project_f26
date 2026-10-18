@@ -35,30 +35,11 @@ a {
     text-underline-offset: 0.2em;
 }
 
-/* Gives keyboard users a clear outline around the selected link. */
-a:focus-visible {
-    outline: 3px solid #B35A00;
-    outline-offset: 3px;
-}
-
 /* Makes headings bold and separates them from surrounding text. */
 h1, h2, h3 {
     font-weight: 700;
     line-height: 1.3;
     color: var(--michigan-blue);
-}
-
-/* Creates a clear size difference between heading levels. */
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-size: 1.2rem;
 }
 
 /* Adds breathing room between paragraphs and content groups. */
@@ -152,14 +133,15 @@ a[href="#main"]:focus {
 
 /* MAIN CONTENT */
 
-/* Adds space around the content so text doesn't touch the screen edges. */
+/* Centers the content and uses a responsive grid without media queries. */
 main {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
     padding: 1.25rem;
-}
-
-/* Separates content sections so the page feels less crowded. */
-main section {
-    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: 1.5rem;
 }
 
 /* Adds space below headings to separate them from the text. */
@@ -170,11 +152,6 @@ main h1, main h2, main h3 {
 /* Limits paragraph width so longer text stays comfortable to read. */
 main p {
     max-width: 70ch;
-}
-
-
-/* Adds space between paragraphs so information is easier to read. */
-main p {
     margin-bottom: 1rem;
 }
 
@@ -195,25 +172,21 @@ header h1 {
 }
 
 
-/* CONTENT GRID */
-
-/* Arranges main sections in a flexible grid that adjusts to screen size. */
-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
-    gap: 1.5rem;
-}
-
 
 /* CONTENT CARDS */
 
-/* Gives each section a clean card with space around its content. */
+
+/* Styles each section as a card and spaces its content vertically. */
 main section {
     background-color: var(--white);
     padding: 1.25rem;
     border-radius: 0.5rem;
     border: 1px solid #D6DEE6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
+
 
 /* Adds a maize accent to help distinguish section headings. */
 main section h2 {
@@ -323,33 +296,6 @@ h2 {
 h3 {
     font-size: clamp(1.1rem, 2.5vw, 1.35rem);
 }
-
-
-/* CONTENT WIDTH */
-
-/* Keeps the page content centered and comfortable to read on larger screens. */
-main {
-    width: 100%;
-    max-width: 75rem;
-    margin: 0 auto;
-}
-
-
-
-/* CARD SPACING */
-
-/* Lets the Grid control spacing between cards instead of adding extra margins. */
-main section {
-    margin-bottom: 0;
-}
-
-/* Keeps content inside each card neatly aligned from top to bottom. */
-main section {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
 
 /* HEADER LOGO SPACING */
 
