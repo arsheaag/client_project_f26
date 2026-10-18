@@ -60,8 +60,9 @@ header {
 /* Keeps the UMSI logo at a readable size without taking up too much space. */
 header img {
     width: 100%;
-    max-width: 12rem;
+    max-width: 9rem;
     height: auto;
+    margin: 0 auto 1rem;
 }
 
 
@@ -75,13 +76,17 @@ nav {
 /* Uses CSS Grid to stack navigation links neatly on mobile screens. */
 nav ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
     gap: 0.5rem;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+/* Makes each navigation link fit within its grid column. */
+nav li {
+    min-width: 0;
+}
 
 /* Makes each navigation link a large button that's easy to tap on mobile. */
 nav a {
@@ -140,7 +145,7 @@ main {
     margin: 0 auto;
     padding: 1.25rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, max(22rem, 45%)), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
     gap: 1.5rem;
 }
 
@@ -295,11 +300,4 @@ h2 {
 /* Keeps smaller headings proportional to the rest of the page. */
 h3 {
     font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-}
-
-/* HEADER LOGO SPACING */
-
-/* Adds space below the logo so it doesn't feel crowded against navigation. */
-header img {
-    margin-bottom: 0.75rem;
 }
