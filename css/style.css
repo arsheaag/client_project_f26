@@ -145,7 +145,7 @@ main {
     margin: 0 auto;
     padding: 1.25rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
 }
 
@@ -154,9 +154,9 @@ main h1, main h2, main h3 {
     margin-bottom: 0.75rem;
 }
 
-/* Limits paragraph width so longer text stays comfortable to read. */
+/* Allows paragraphs to use the available card width. */
 main p {
-    max-width: 70ch;
+    max-width: 100%;
     margin-bottom: 1rem;
 }
 
@@ -191,7 +191,6 @@ main section {
     flex-direction: column;
     gap: 0.5rem;
 }
-
 
 /* Adds a maize accent to help distinguish section headings. */
 main section h2 {
