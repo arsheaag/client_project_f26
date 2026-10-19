@@ -91,7 +91,7 @@ nav li {
 /* Makes each navigation link a large button that's easy to tap on mobile. */
 nav a {
     display: block;
-    padding: 0.85rem 1rem;
+    padding: 0.7rem 1rem;
     background-color: var(--michigan-blue);
     color: var(--white);
     text-align: center;
@@ -287,7 +287,8 @@ footer a:focus-visible {
 
 /* Adjusts the main heading size automatically based on screen width. */
 h1 {
-    font-size: clamp(1.6rem, 5vw, 2.5rem);
+    font-size: clamp(1.4rem, 4vw, 2.25rem);
+    line-height: 1.25;
     overflow-wrap: break-word;
 }
 
@@ -326,4 +327,34 @@ h3 {
     object-fit: cover;
     object-position: center 60%;
     border-radius: 0.5rem;
+}
+
+/* Compact, professional UMSI banner */
+.site-banner {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0.9rem 1.5rem;
+    background-color: #00274C;
+    border-bottom: 0.3rem solid #FFCB05;
+    border-radius: 0.5rem;
+}
+
+/* Official UMSI logo */
+header .banner-logo {
+    width: clamp(5rem, 10vw, 6.5rem);
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.2rem;
+}
+
+/* School name */
+header .banner-title {
+    color: #FFFFFF;
+    font-size: clamp(1.4rem, 3vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
 }
