@@ -318,3 +318,12 @@ h3 {
     object-position: center 45%;
     border-radius: 0.5rem;
 }
+
+/* Larger responsive image for the homepage */
+.home-image {
+    width: 100%;
+    height: clamp(22rem, 45vw, 34rem);
+    object-fit: cover;
+    object-position: center 60%;
+    border-radius: 0.5rem;
+}
