@@ -301,11 +301,20 @@ h3 {
     font-size: clamp(1.1rem, 2.5vw, 1.35rem);
 }
 
-/* Crop the Preparing page image to keep it compact on mobile */
-.prep-image {
+/* Crop the Preparing and starting page image to keep it compact on mobile */
+.prep-start-image {
     width: 100%;
     height: clamp(18rem, 35vw, 25rem);
     object-fit: cover;
     object-position: center 75%;
+    border-radius: 0.5rem;
+}
+
+/* Adjust the During page image to show more of the workshop */
+.during-image {
+    width: 100%;
+    height: clamp(20rem, 40vw, 29rem);
+    object-fit: cover;
+    object-position: center 45%;
     border-radius: 0.5rem;
 }
