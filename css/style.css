@@ -436,3 +436,25 @@ header .banner-title {
     clip-path: inset(50%);
     white-space: nowrap;
 }
+
+/*added feature 3: text size change */
+.text-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text-controls button {
+    background-color: var(--michigan-blue);
+    color: var(--white);
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.text-controls button:focus-visible {
+    outline: 3px solid var(--maize);
+    outline-offset: 3px;
+}

@@ -43,3 +43,24 @@ if (searchInput && searchResults) {
     });
 }
 
+// Text size controls
+const smaller = document.querySelector(".text-smaller");
+const larger = document.querySelector(".text-larger");
+
+let textSize = 16;
+
+if (smaller && larger) {
+    smaller.addEventListener("click", function() {
+        if (textSize > 14) {
+            textSize -= 2;
+            document.querySelector("main").style.fontSize = textSize + "px";
+        }
+    });
+
+    larger.addEventListener("click", function() {
+        if (textSize < 24) {
+            textSize += 2;
+            document.querySelector("main").style.fontSize = textSize + "px";
+        }
+    });
+}
