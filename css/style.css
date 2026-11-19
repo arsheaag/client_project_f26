@@ -394,3 +394,15 @@ header .banner-title {
     }
 
 }
+
+/* added feature */
+.back-to-top {
+    background-color: #00274C;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.back-to-top:focus-visible {
+    outline: 3px solid #FFCB05;
+}
