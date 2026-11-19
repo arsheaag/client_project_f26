@@ -358,3 +358,38 @@ header .banner-title {
     line-height: 1.2;
     margin: 0;
 }
+
+/* additions for desktop view */
+
+/* this makes the nav bars flow in the same row on larger views */
+@media (min-width: 768px) {
+    nav ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* changes view to stretched content cards on larger view to maximise space use */
+    main {
+        max-width: 100%;
+    }
+
+    /* this makes sure that nav is equal in height inspite of text len */
+    nav a {
+        /* with the inside text also centre aligned vertically and horizontally */
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    .intro-card-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+    }
+
+    .intro-card-layout img {
+        height: 16rem;
+        object-fit: cover;
+    }
+}
