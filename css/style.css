@@ -395,14 +395,44 @@ header .banner-title {
 
 }
 
-/* added feature */
+/* added feature 1: back to top button */
 .back-to-top {
-    background-color: #00274C;
-    color: white;
+    background-color: var(--michigan-blue);
+    color: var(--white);
     padding: 12px;
     cursor: pointer;
 }
 
 .back-to-top:focus-visible {
-    outline: 3px solid #FFCB05;
+    outline: 3px solid var(--maize);
+}
+
+/* added feature 2: search bar */
+.search-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 20px auto;
+}
+
+.site-search {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid var(--michigan-blue);
+    border-radius: 25px;
+    background-color: white;
+    font-size: 1rem;
+}
+
+.site-search:focus-visible {
+    outline: 3px solid var(--maize);
+    outline-offset: 2px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
